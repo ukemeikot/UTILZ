@@ -39,7 +39,7 @@
         {
           "photosPermission": "Allow $(PRODUCT_NAME) to attach images to your notes.",
           "cameraPermission": false,
-          "microphonePermission": false
+          "microphonePermission": "Allow $(PRODUCT_NAME) to access the microphone for voice notes and dictation."
         }
       ],
       "expo-asset"
@@ -49,10 +49,6 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "infoPlist": {
-        "NSMicrophoneUsageDescription": "Allow UTILZ to record voice notes.",
-        "NSSpeechRecognitionUsageDescription": "Allow UTILZ to transcribe your speech into notes."
-      },
       "supportsTablet": true,
       "bundleIdentifier": "com.acuop.hngstagezro"
     },
@@ -61,10 +57,6 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "permissions": [
-        "RECORD_AUDIO",
-        "MODIFY_AUDIO_SETTINGS"
-      ],
       "edgeToEdgeEnabled": true,
       "predictiveBackGestureEnabled": false,
       "package": "com.acuop.hngstagezro"
