@@ -1,30 +1,81 @@
 {
   "expo": {
-    "name": "hng-stage-zero",
+    "name": "UTILZ",
     "slug": "hng-stage-zero",
+    "scheme": "hngstagezro",
     "version": "1.0.0",
+    "plugins": [
+      "expo-router",
+      "expo-font",
+      "expo-secure-store",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#F4F8FB",
+          "image": "./assets/splash-icon.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "dark": {
+            "backgroundColor": "#07192B",
+            "image": "./assets/splash-icon.png"
+          }
+        }
+      ],
+      [
+        "expo-audio",
+        {
+          "microphonePermission": "Allow $(PRODUCT_NAME) to record voice notes."
+        }
+      ],
+      [
+        "expo-speech-recognition",
+        {
+          "microphonePermission": "Allow $(PRODUCT_NAME) to access the microphone for dictation.",
+          "speechRecognitionPermission": "Allow $(PRODUCT_NAME) to transcribe your speech into notes."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow $(PRODUCT_NAME) to attach images to your notes.",
+          "cameraPermission": false,
+          "microphonePermission": false
+        }
+      ],
+      "expo-asset"
+    ],
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
-    "splash": {
-      "image": "./assets/splash-icon.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
     "ios": {
-      "supportsTablet": true
+      "infoPlist": {
+        "NSMicrophoneUsageDescription": "Allow UTILZ to record voice notes.",
+        "NSSpeechRecognitionUsageDescription": "Allow UTILZ to transcribe your speech into notes."
+      },
+      "supportsTablet": true,
+      "bundleIdentifier": "com.acuop.hngstagezro"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
+      "permissions": [
+        "RECORD_AUDIO",
+        "MODIFY_AUDIO_SETTINGS"
+      ],
       "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "package": "com.acuop.hngstagezro"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "0f04aef5-f2e2-4732-9f7d-d93fb8d90d83"
+      }
     }
   }
 }
