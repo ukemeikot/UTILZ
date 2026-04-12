@@ -92,20 +92,20 @@ The app follows a screen -> hook/store -> module -> persistence flow so the UI s
 
 ```mermaid
 flowchart TD
-    A[Expo Router Screens\napp/ and app/(tabs)] --> B[Reusable Components\nsrc/components]
-    A --> C[Hooks\nsrc/hooks]
-    A --> D[Zustand Stores\nsrc/store]
+    A["Expo Router Screens<br/>app routes and tabs routes"] --> B["Reusable Components<br/>src/components"]
+    A --> C["Hooks<br/>src/hooks"]
+    A --> D["Zustand Stores<br/>src/store"]
 
-    C --> E[Pure Feature Logic\nsrc/modules]
+    C --> E["Pure Feature Logic<br/>src/modules"]
     D --> E
 
-    E --> F[Constants and Types\nsrc/constants + src/types]
-    D --> G[AsyncStorage Helpers\nsrc/utils/storage.ts]
-    D --> H[SecureStore Helpers\nsrc/utils/secure.ts]
-    C --> I[Platform / Device APIs\nExpo Audio, Speech, Image Picker, Network]
+    E --> F["Constants and Types<br/>src/constants and src/types"]
+    D --> G["AsyncStorage Helpers<br/>src/utils/storage.ts"]
+    D --> H["SecureStore Helpers<br/>vault and auth persistence"]
+    C --> I["Platform APIs<br/>Expo Audio, Speech, Image Picker, Network"]
 
-    G --> J[Notes, settings, trackers]
-    H --> K[Vault PIN, notes PIN,\npassword vault entries]
+    G --> J["Notes, settings, trackers"]
+    H --> K["Vault PIN, notes PIN, password entries"]
 ```
 
 ### Architectural principles used
