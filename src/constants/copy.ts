@@ -8,6 +8,7 @@ const copy = {
       calculatorShort: 'Calc',
       converter: 'Converter',
       time: 'Time',
+      todo: 'Todo',
       more: 'More',
     },
     home: {
@@ -19,7 +20,7 @@ const copy = {
       disabled: 'Disabled',
       quickActions: [
         { title: 'Converter', subtitle: 'Units, currency, bases' },
-        { title: 'Calculator', subtitle: 'Standard and scientific' },
+        { title: 'Todo', subtitle: 'Plan, reorder, complete' },
         { title: 'Time', subtitle: 'Clocks, timer, stopwatch' },
         { title: 'More', subtitle: 'Health, notes, tools, settings' },
       ],
@@ -27,11 +28,60 @@ const copy = {
     more: {
       title: 'More',
       cards: {
+        calculator: { title: 'Calculator', subtitle: 'Standard and scientific' },
         health: { title: 'Health', subtitle: 'BMI, water, calories' },
         notes: { title: 'Notes', subtitle: 'Write, dictate, protect' },
+        todos: { title: 'Todos', subtitle: 'Plan, reorder, complete' },
         tools: { title: 'Utility Tools', subtitle: 'Passwords and extras' },
         settings: { title: 'Settings', subtitle: 'Theme, font, language, lock' },
       },
+    },
+    todo: {
+      title: 'Todo Planner',
+      summaryTitle: 'Keep every task in motion',
+      summaryBody:
+        'Create focused task cards, reorder them anytime, and keep your next priorities easy to reach.',
+      listTitle: 'Todo cards',
+      itemsLabel: 'items',
+      createTitle: 'Create todo',
+      editTitle: 'Edit todo',
+      createAction: 'Create task',
+      saveAction: 'Save task',
+      cancelAction: 'Cancel',
+      completed: 'Completed',
+      pending: 'Pending',
+      dueShort: 'Due:',
+      updatedLabel: 'Updated',
+      titleRequired: 'Add a task title before saving this card.',
+      filters: {
+        all: 'All',
+        open: 'Open',
+        done: 'Done',
+      },
+      stats: {
+        total: 'Total',
+        open: 'Open',
+        done: 'Done',
+      },
+      priority: {
+        low: 'Low',
+        medium: 'Medium',
+        high: 'High',
+      },
+      fields: {
+        title: 'Title',
+        details: 'Details',
+        dueDate: 'Due date',
+        priority: 'Priority',
+      },
+      placeholders: {
+        title: 'What needs to get done?',
+        details: 'Add context, checklist notes, or a quick reminder.',
+        dueDate: 'e.g. Today, Apr 18 6:00 PM',
+      },
+      emptyTitle: 'No todo cards yet',
+      emptyBody:
+        'Create your first task card and organize the list with the up and down controls whenever priorities shift.',
     },
     settings: {
       title: 'Settings',
@@ -254,9 +304,57 @@ const copy = {
       cards: {
         health: { title: 'Sante', subtitle: 'IMC, eau, calories' },
         notes: { title: 'Notes', subtitle: 'Ecrire, dicter, proteger' },
+        todos: { title: 'Taches', subtitle: 'Planifier, reordonner, terminer' },
         tools: { title: 'Outils', subtitle: 'Mots de passe et extras' },
         settings: { title: 'Reglages', subtitle: 'Theme, police, langue, verrou' },
       },
+    },
+    todo: {
+      title: 'Planificateur de taches',
+      summaryTitle: 'Gardez chaque tache en mouvement',
+      summaryBody:
+        'Creez des cartes de taches claires, reordonnez-les a tout moment et gardez vos prochaines priorites a portee de main.',
+      listTitle: 'Cartes de taches',
+      itemsLabel: 'elements',
+      createTitle: 'Creer une tache',
+      editTitle: 'Modifier la tache',
+      createAction: 'Creer la tache',
+      saveAction: 'Enregistrer',
+      cancelAction: 'Annuler',
+      completed: 'Terminee',
+      pending: 'En attente',
+      dueShort: 'Echeance :',
+      updatedLabel: 'Mis a jour',
+      titleRequired: 'Ajoutez un titre avant d enregistrer cette carte.',
+      filters: {
+        all: 'Toutes',
+        open: 'Ouvertes',
+        done: 'Terminees',
+      },
+      stats: {
+        total: 'Total',
+        open: 'Ouvertes',
+        done: 'Terminees',
+      },
+      priority: {
+        low: 'Basse',
+        medium: 'Moyenne',
+        high: 'Haute',
+      },
+      fields: {
+        title: 'Titre',
+        details: 'Details',
+        dueDate: 'Date limite',
+        priority: 'Priorite',
+      },
+      placeholders: {
+        title: 'Que faut-il terminer ?',
+        details: 'Ajoutez du contexte, des notes ou un rappel rapide.',
+        dueDate: 'ex. Aujourd hui, 18 avr. 18:00',
+      },
+      emptyTitle: 'Aucune carte de tache',
+      emptyBody:
+        'Creez votre premiere carte de tache puis reordonnez la liste avec les controles haut et bas quand les priorites changent.',
     },
     settings: {
       title: 'Reglages',
@@ -479,9 +577,57 @@ const copy = {
       cards: {
         health: { title: 'Salud', subtitle: 'IMC, agua, calorias' },
         notes: { title: 'Notas', subtitle: 'Escribir, dictar, proteger' },
+        todos: { title: 'Tareas', subtitle: 'Planear, reordenar, completar' },
         tools: { title: 'Herramientas', subtitle: 'Contrasenas y extras' },
         settings: { title: 'Ajustes', subtitle: 'Tema, fuente, idioma, bloqueo' },
       },
+    },
+    todo: {
+      title: 'Planificador de tareas',
+      summaryTitle: 'Manten cada tarea en movimiento',
+      summaryBody:
+        'Crea tarjetas de tareas claras, reordenalas cuando quieras y manten tus prioridades cerca.',
+      listTitle: 'Tarjetas de tareas',
+      itemsLabel: 'elementos',
+      createTitle: 'Crear tarea',
+      editTitle: 'Editar tarea',
+      createAction: 'Crear tarea',
+      saveAction: 'Guardar tarea',
+      cancelAction: 'Cancelar',
+      completed: 'Completada',
+      pending: 'Pendiente',
+      dueShort: 'Vence:',
+      updatedLabel: 'Actualizada',
+      titleRequired: 'Agrega un titulo antes de guardar esta tarjeta.',
+      filters: {
+        all: 'Todas',
+        open: 'Abiertas',
+        done: 'Hechas',
+      },
+      stats: {
+        total: 'Total',
+        open: 'Abiertas',
+        done: 'Hechas',
+      },
+      priority: {
+        low: 'Baja',
+        medium: 'Media',
+        high: 'Alta',
+      },
+      fields: {
+        title: 'Titulo',
+        details: 'Detalles',
+        dueDate: 'Fecha limite',
+        priority: 'Prioridad',
+      },
+      placeholders: {
+        title: 'Que necesitas terminar?',
+        details: 'Agrega contexto, notas o un recordatorio rapido.',
+        dueDate: 'ej. Hoy, 18 abr 6:00 PM',
+      },
+      emptyTitle: 'Todavia no hay tareas',
+      emptyBody:
+        'Crea tu primera tarjeta y reorganiza la lista con los controles de arriba y abajo cuando cambien las prioridades.',
     },
     settings: {
       title: 'Ajustes',

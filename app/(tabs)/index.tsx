@@ -5,7 +5,7 @@ import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import {
   ArrowsLeftRightIcon,
-  CalculatorIcon,
+  ChecksIcon,
   ClockIcon,
   DotsThreeCircleIcon,
 } from 'phosphor-react-native';
@@ -32,8 +32,8 @@ export default function HomeScreen() {
     },
     {
       ...copy.home.quickActions[1],
-      route: '/(tabs)/calculator',
-      icon: CalculatorIcon,
+      route: '/(tabs)/todo',
+      icon: ChecksIcon,
     },
     {
       ...copy.home.quickActions[2],

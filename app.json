@@ -42,7 +42,14 @@
           "microphonePermission": "Allow $(PRODUCT_NAME) to access the microphone for voice notes and dictation."
         }
       ],
-      "expo-asset"
+      "expo-asset",
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/icon.png",
+          "color": "#007AFF"
+        }
+      ]
     ],
     "orientation": "portrait",
     "icon": "./assets/icon.png",

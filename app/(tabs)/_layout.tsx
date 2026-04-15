@@ -3,7 +3,7 @@ import { useMemo } from 'react';
 import { Tabs } from 'expo-router';
 import {
   ArrowsLeftRightIcon,
-  CalculatorIcon,
+  ChecksIcon,
   ClockIcon,
   DotsThreeCircleIcon,
   HouseIcon,
@@ -86,12 +86,11 @@ export default function TabsLayout() {
         }}
       />
       <Tabs.Screen
-        name="calculator"
+        name="todo"
         options={{
-          title: copy.tabs.calculator,
-          tabBarLabel: copy.tabs.calculatorShort,
+          title: copy.tabs.todo,
           tabBarIcon: ({ color, focused }) => (
-            <CalculatorIcon
+            <ChecksIcon
               color={color}
               size={focused ? 30 : 24}
               weight={focused ? 'fill' : 'regular'}

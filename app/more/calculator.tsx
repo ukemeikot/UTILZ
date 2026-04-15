@@ -2,7 +2,8 @@ import { useState } from 'react';
 
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { BackspaceIcon } from 'phosphor-react-native';
+import { ArrowLeftIcon, BackspaceIcon } from 'phosphor-react-native';
+import { router } from 'expo-router';
 
 import { CalcButton } from '../../src/components/calculator/CalcButton';
 import { CalcDisplay } from '../../src/components/calculator/CalcDisplay';
@@ -163,9 +164,12 @@ export default function CalculatorScreen() {
   };
 
   return (
-    <SafeAreaView edges={['top', 'left', 'right']} style={styles.safeArea}>
+    <SafeAreaView edges={['top', 'left', 'right', 'bottom']} style={styles.safeArea}>
       <View style={styles.container}>
         <View style={styles.topRail}>
+          <Pressable onPress={() => router.back()} style={styles.backButton}>
+            <ArrowLeftIcon color={theme.colors.text.primary} size={rfs(18)} weight="bold" />
+          </Pressable>
           <View style={styles.modeBadge}>
             <View
               style={[
@@ -255,9 +259,20 @@ function createStyles(theme: AppTheme) {
         : theme.colors.background.screen,
     },
     topRail: {
+      flexDirection: 'row',
       alignItems: 'center',
+      justifyContent: 'space-between',
       minHeight: vs(34),
+    },
+    backButton: {
+      width: vs(42),
+      height: vs(42),
+      borderRadius: 999,
+      alignItems: 'center',
       justifyContent: 'center',
+      backgroundColor: theme.colors.surface.secondary,
+      borderWidth: 1,
+      borderColor: theme.colors.border.subtle,
     },
     modeBadge: {
       flexDirection: 'row',

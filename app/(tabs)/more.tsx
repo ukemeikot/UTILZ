@@ -2,10 +2,12 @@ import { router } from 'expo-router';
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import {
+  ChecksIcon,
   HeartbeatIcon,
   NotePencilIcon,
   GearSixIcon,
   ShieldCheckIcon,
+  CalculatorIcon,
 } from 'phosphor-react-native';
 
 import { useAppCopy } from '../../src/constants/copy';
@@ -17,6 +19,11 @@ export default function MoreScreen() {
   const copy = useAppCopy();
   const styles = createStyles(theme);
   const moreSections = [
+    {
+      ...copy.more.cards.calculator,
+      route: '/more/calculator',
+      icon: CalculatorIcon,
+    },
     {
       ...copy.more.cards.health,
       route: '/more/health',
