@@ -84,7 +84,7 @@ export default function TodoTabScreen() {
   }, [hydrate]);
 
   useEffect(() => {
-    // Request notification permissions
+    // Request notification permissions on app start
     const requestPermissions = async () => {
       const { status } = await Notifications.requestPermissionsAsync();
       if (status !== 'granted') {
@@ -93,7 +93,9 @@ export default function TodoTabScreen() {
     };
 
     void requestPermissions();
+  }, []); // Empty dependency array - runs once on mount
 
+  useEffect(() => {
     // Reschedule notifications for existing todos with due dates
     const rescheduleNotifications = async () => {
       await Notifications.cancelAllScheduledNotificationsAsync();

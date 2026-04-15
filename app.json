@@ -47,7 +47,9 @@
         "expo-notifications",
         {
           "icon": "./assets/icon.png",
-          "color": "#007AFF"
+          "color": "#007AFF",
+          "defaultChannel": "default",
+          "sounds": []
         }
       ]
     ],
@@ -57,7 +59,11 @@
     "newArchEnabled": true,
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.acuop.hngstagezro"
+      "bundleIdentifier": "com.acuop.hngstagezro",
+      "infoPlist": {
+        "UIBackgroundModes": ["remote-notification"],
+        "NSUserNotificationsUsageDescription": "Allow $(PRODUCT_NAME) to send you reminders for upcoming tasks."
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -66,7 +72,12 @@
       },
       "edgeToEdgeEnabled": true,
       "predictiveBackGestureEnabled": false,
-      "package": "com.acuop.hngstagezro"
+      "package": "com.acuop.hngstagezro",
+      "permissions": [
+        "android.permission.RECEIVE_BOOT_COMPLETED",
+        "android.permission.VIBRATE",
+        "android.permission.POST_NOTIFICATIONS"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"
